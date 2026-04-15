@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Park Hotel Mantiqueira — Natureza, conforto e experiência na Serra da Mantiqueira, Barbacena MG. Hospedagem, Day Use, eventos e tour virtual."/>
+  <meta name="keywords" content="Park Hotel Mantiqueira, hotel Barbacena, day use Mantiqueira, Serra da Mantiqueira, hotel MG"/>
+  <meta property="og:title" content="Park Hotel Mantiqueira"/>
+  <meta property="og:description" content="Um refúgio na Serra da Mantiqueira. Hospedagem, Day Use e eventos em Barbacena, MG."/>
+  <meta property="og:type" content="website"/>
+  <title>Park Hotel Mantiqueira — Barbacena, MG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#FFFFFF;--bg2:#F5F7F4;
+      --dark:#171C18;
+      --accent:#93DD35;--accent-dark:#6BB520;--accent-hover:#a8f03e;
+      --text:#171C18;--text2:#3A4A3C;--text3:rgba(23,28,24,.5);--text4:rgba(23,28,24,.35);
+      --border:rgba(23,28,24,.1);
+    }
+    body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+    html{scroll-behavior:smooth}
+
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes pulsemap{0%,100%{transform:scale(1) rotate(-45deg)}50%{transform:scale(1.14) rotate(-45deg)}}
+    @keyframes iconBob{0%,100%{transform:translateY(0)}45%{transform:translateY(-6px)}75%{transform:translateY(-2px)}}
+    @keyframes iconGlow{0%,100%{filter:drop-shadow(0 0 0 transparent)}50%{filter:drop-shadow(0 0 8px rgba(107,181,32,.7))}}
+    @keyframes floatUp{0%{opacity:0;transform:translateY(10px)}12%{opacity:1;transform:translateY(0)}85%{opacity:1}100%{opacity:0;transform:translateY(-8px)}}
+    @keyframes droneFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+    /* NAV */
+    .nav-wrap{position:sticky;top:0;z-index:200;padding:10px 2rem;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1000px;margin:0 auto;background:var(--bg);border:1.5px solid rgba(147,221,53,.35);border-radius:50px;padding:6px 8px 6px 10px;display:flex;align-items:center;gap:6px;box-shadow:0 2px 16px rgba(107,181,32,.12)}
+    .logo-pill{display:flex;align-items:center;gap:8px;padding:4px 12px 4px 6px;border-radius:50px;background:var(--accent);flex-shrink:0;text-decoration:none;transition:background .2s}
+    .logo-pill:hover{background:var(--accent-hover)}
+    .logo-icon{width:32px;height:32px;background:rgba(255,255,255,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .logo-icon svg{width:16px;height:16px;stroke:#171C18;fill:none;stroke-width:1.8}
+    .logo-text{font-size:12px;font-weight:800;color:#171C18;letter-spacing:.04em;white-space:nowrap}
+    .nav-links-wrap{display:flex;align-items:center;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none;padding:0 4px}
+    .nav-links-wrap::-webkit-scrollbar{display:none}
+    .nav-pill{display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:50px;background:transparent;border:1px solid transparent;color:var(--text3);font-family:'Barlow',sans-serif;font-size:11px;font-weight:700;letter-spacing:.07em;text-decoration:none;white-space:nowrap;transition:all .2s;cursor:pointer}
+    .nav-pill:hover{background:rgba(147,221,53,.1);border-color:rgba(147,221,53,.4);color:var(--accent-dark)}
+    .nav-pill svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.8;flex-shrink:0}
+    .nav-pill-cta{background:var(--dark);color:#fff!important;border-color:var(--dark);flex-shrink:0}
+    .nav-pill-cta svg{stroke:#fff!important}
+    .nav-pill-cta:hover{background:#2a3429!important;border-color:#2a3429!important}
+
+    /* LEAF BACKGROUNDS */
+    .leaf-bg{position:relative;overflow:hidden}
+    .leaf-bg::before,.leaf-bg::after{content:'';position:absolute;pointer-events:none;opacity:.055;background-repeat:no-repeat;background-size:contain}
+    .leaf-bg-1::before{top:-40px;right:-60px;width:320px;height:320px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M100 10 C140 10 180 40 185 90 C190 140 160 175 110 185 C60 195 20 165 15 110 C10 55 60 10 100 10Z' fill='none' stroke='%236BB520' stroke-width='1.5'/%3E%3Cpath d='M100 10 C100 10 100 185 100 185' fill='none' stroke='%236BB520' stroke-width='1'/%3E%3Cpath d='M100 50 C120 45 150 55 160 70' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3Cpath d='M100 80 C125 72 158 82 170 100' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3Cpath d='M100 110 C122 104 152 115 162 132' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3Cpath d='M100 50 C80 45 50 55 40 70' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3Cpath d='M100 80 C75 72 42 82 30 100' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3Cpath d='M100 110 C78 104 48 115 38 132' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3C/svg%3E")}
+    .leaf-bg-1::after{bottom:-80px;left:-80px;width:380px;height:380px;transform:rotate(35deg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M30 170 C20 100 50 30 120 20 C160 14 185 40 190 80 C195 130 160 170 100 180 C70 185 40 175 30 170Z' fill='none' stroke='%236BB520' stroke-width='1.5'/%3E%3Cpath d='M30 170 C30 170 190 80 190 80' fill='none' stroke='%236BB520' stroke-width='1'/%3E%3Cpath d='M80 148 C90 120 110 100 140 95' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3Cpath d='M55 130 C70 100 100 78 135 68' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3Cpath d='M42 110 C60 82 92 60 128 50' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3C/svg%3E")}
+    .leaf-bg-2::before{top:-60px;left:-40px;width:260px;height:260px;transform:rotate(-20deg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M100 10 C140 10 180 40 185 90 C190 140 160 175 110 185 C60 195 20 165 15 110 C10 55 60 10 100 10Z' fill='none' stroke='%236BB520' stroke-width='1.5'/%3E%3Cpath d='M100 10 C100 10 100 185 100 185' fill='none' stroke='%236BB520' stroke-width='1'/%3E%3Cpath d='M100 50 C120 45 150 55 160 70' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3Cpath d='M100 80 C125 72 158 82 170 100' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3Cpath d='M100 50 C80 45 50 55 40 70' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3Cpath d='M100 80 C75 72 42 82 30 100' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3C/svg%3E")}
+    .leaf-bg-2::after{bottom:-50px;right:-30px;width:220px;height:220px;transform:rotate(55deg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M30 170 C20 100 50 30 120 20 C160 14 185 40 190 80 C195 130 160 170 100 180 C70 185 40 175 30 170Z' fill='none' stroke='%236BB520' stroke-width='1.5'/%3E%3Cpath d='M30 170 C30 170 190 80 190 80' fill='none' stroke='%236BB520' stroke-width='1'/%3E%3Cpath d='M80 148 C90 120 110 100 140 95' fill='none' stroke='%236BB520' stroke-width='.8'/%3E%3C/svg%3E")}
+
+    /* COMMONS */
+    .section-eyebrow{font-size:10px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--accent-dark);margin-bottom:.55rem}
+    .section-title{font-size:34px;font-weight:300;color:var(--text);line-height:1.12;margin-bottom:.65rem}
+    .section-title strong{font-weight:700;color:var(--dark)}
+    .section-line{width:32px;height:2px;background:var(--accent);margin-bottom:1.2rem}
+    .divider{height:1px;background:var(--border)}
+
+    /* HERO */
+    .hero{background:var(--dark);padding:4rem 2rem 4.5rem;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+    .hero-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(147,221,53,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(147,221,53,.03) 1px,transparent 1px);background-size:64px 64px}
+    .hero-glow{position:absolute;bottom:-60px;left:50%;transform:translateX(-50%);width:500px;height:200px;background:radial-gradient(ellipse,rgba(147,221,53,.1) 0%,transparent 70%);pointer-events:none}
+    .hero-content{position:relative;animation:fadeInUp .75s ease both}
+    .hero-eyebrow{font-size:10px;font-weight:700;letter-spacing:.4em;text-transform:uppercase;color:var(--accent);margin-bottom:1.1rem;display:flex;align-items:center;justify-content:center;gap:14px}
+    .hero-eyebrow::before,.hero-eyebrow::after{content:'';width:36px;height:1px;background:var(--accent);opacity:.4}
+    .hero h1{font-size:56px;font-weight:300;line-height:1.04;color:#fff;margin-bottom:.4rem}
+    .hero h1 em{font-style:italic;color:var(--accent);font-weight:400}
+    .hero-tagline{font-size:13px;font-weight:500;color:rgba(255,255,255,.4);letter-spacing:.22em;text-transform:uppercase;margin-bottom:2.5rem}
+    .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    .btn-main{background:var(--accent);color:var(--dark);border:none;border-radius:4px;padding:15px 36px;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;font-family:'Barlow',sans-serif;transition:background .2s,transform .2s;text-decoration:none;display:inline-flex;align-items:center}
+    .btn-main:hover{background:var(--accent-hover);transform:translateY(-2px)}
+    .btn-sec{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5);border-radius:4px;padding:15px 36px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;font-family:'Barlow',sans-serif;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center}
+    .btn-sec:hover{background:rgba(255,255,255,.1);border-color:#fff;transform:translateY(-2px)}
+
+    /* SOBRE */
+    .sobre{background:var(--bg);padding:4rem 2.5rem}
+    .sobre-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:stretch}
+    .sobre-left{display:flex;flex-direction:column}
+    .sobre-text{flex:1}
+    .sobre-text p{font-size:14px;color:var(--text2);line-height:1.78;margin-bottom:.85rem}
+    .sobre-stats{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-top:1.5rem}
+    .stat{border:1px solid var(--border);border-radius:6px;padding:.9rem 1rem;text-align:center;transition:border-color .25s,transform .25s;cursor:default}
+    .stat:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .stat .n{font-size:28px;font-weight:300;font-style:italic;color:var(--accent-dark)}
+    .stat .l{font-size:10px;font-weight:700;color:var(--text4);letter-spacing:.12em;text-transform:uppercase;margin-top:3px}
+    .video-col{display:flex}
+    .video-frame{flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.85rem;min-height:360px;position:relative;overflow:hidden;cursor:pointer;transition:border-color .25s}
+    .video-frame:hover{border-color:var(--accent)}
+    .play-ring{width:54px;height:54px;border:2px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s;z-index:1;background:rgba(147,221,53,.08)}
+    .video-frame:hover .play-ring{background:var(--accent)}
+    .vid-label{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text3);z-index:1}
+    .vid-ratio{font-size:10px;color:var(--text4);z-index:1}
+
+    /* TOUR */
+    .tour{background:var(--dark);padding:4rem 2.5rem}
+    .tour-inner{max-width:960px;margin:0 auto}
+    .tour-frame{background:rgba(255,255,255,.04);border:1px solid rgba(147,221,53,.2);border-radius:10px;width:100%;aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.25rem;position:relative;overflow:hidden;cursor:pointer;transition:border-color .25s;margin-top:2rem}
+    .tour-frame:hover{border-color:rgba(147,221,53,.5)}
+    .tour-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(147,221,53,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(147,221,53,.03) 1px,transparent 1px);background-size:60px 60px}
+    .drone-anim{position:relative;z-index:1;animation:droneFloat 3s ease-in-out infinite}
+    .drone-anim svg{width:52px;height:52px;stroke:var(--accent);fill:none;stroke-width:1}
+    .tour-play{width:62px;height:62px;border:2px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;z-index:1;transition:background .25s}
+    .tour-frame:hover .tour-play{background:rgba(147,221,53,.15)}
+    .tour-play svg{margin-left:4px}
+    .tour-label{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);position:relative;z-index:1}
+    .tour-sub{font-size:11px;color:rgba(255,255,255,.22);letter-spacing:.1em;position:relative;z-index:1}
+    .tour-badge{position:absolute;top:16px;right:16px;background:rgba(147,221,53,.15);border:1px solid rgba(147,221,53,.35);border-radius:20px;padding:4px 12px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);z-index:1}
+
+    /* ESTRUTURA */
+    .estrutura{background:var(--bg2);padding:4rem 2.5rem}
+    .estrutura-grid{display:grid;grid-template-columns:repeat(3,1fr);max-width:960px;margin:2rem auto 0;border:1px solid var(--border);border-radius:8px;overflow:visible;background:var(--bg)}
+    .est-card{background:var(--bg);padding:1.75rem 1.5rem;cursor:pointer;transition:background .2s,transform .3s;position:relative;overflow:visible}
+    .est-card:hover{background:rgba(147,221,53,.06);transform:translateY(-5px);z-index:2;box-shadow:0 10px 28px rgba(0,0,0,.08)}
+    .est-icon-svg{width:30px;height:30px;stroke:var(--accent-dark);fill:none;stroke-width:1.3;opacity:.8;transition:opacity .25s;margin-bottom:.875rem;display:block}
+    .est-card:hover .est-icon-svg{opacity:1;animation:iconBob .55s ease,iconGlow 1.6s ease infinite}
+    .est-card h3{font-size:14px;font-weight:700;color:var(--text);margin-bottom:.3rem}
+    .est-sub{font-size:12px;color:var(--text3);overflow:hidden;height:17px;transition:height .25s,opacity .25s}
+    .est-card:hover .est-sub{height:0;opacity:0}
+    .mini-popup{max-height:0;overflow:hidden;transition:max-height .38s ease,opacity .25s;opacity:0;margin-top:.2rem}
+    .est-card:hover .mini-popup{max-height:130px;opacity:1}
+    .mini-popup p{font-size:12px;color:var(--text2);line-height:1.5}
+    .mini-popup ul{list-style:none;margin-top:.35rem}
+    .mini-popup ul li{font-size:11px;color:var(--accent-dark);padding:1px 0;font-weight:700}
+    .mini-popup ul li::before{content:'— ';opacity:.5}
+    .br{border-right:1px solid var(--border)}
+    .bb{border-bottom:1px solid var(--border)}
+
+    /* GALERIA */
+    .galeria{background:var(--bg);padding:4rem 2.5rem}
+    .carousel-outer{position:relative;max-width:960px;margin:2rem auto 0}
+    .carousel-wrap{overflow:hidden;border-radius:6px}
+    .carousel-track{display:flex;gap:14px;transition:transform .45s cubic-bezier(.4,0,.2,1);will-change:transform}
+    .gal-item{flex:0 0 calc(33.333% - 10px);background:var(--bg2);border:1px solid var(--border);border-radius:6px;aspect-ratio:3/4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;overflow:hidden;transition:border-color .25s,transform .25s;cursor:pointer}
+    .gal-item:hover{border-color:var(--accent);transform:scale(1.01)}
+    .gal-item svg{width:20px;height:20px;stroke:var(--accent-dark);fill:none;stroke-width:1;opacity:.35}
+    .gal-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text3)}
+    .car-btn{position:absolute;top:42%;transform:translateY(-50%);width:44px;height:44px;background:var(--bg);border:2px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;transition:background .2s,transform .2s;color:var(--accent-dark);box-shadow:0 2px 8px rgba(0,0,0,.1)}
+    .car-btn:hover{background:var(--accent);color:#fff;transform:translateY(-50%) scale(1.08)}
+    .car-prev{left:-22px}
+    .car-next{right:-22px}
+    .car-dots{display:flex;gap:6px;justify-content:center;margin-top:1.25rem}
+    .car-dot{width:20px;height:2px;background:var(--border);border-radius:1px;cursor:pointer;transition:all .3s}
+    .car-dot.active{background:var(--accent-dark);width:34px}
+
+    /* DAY USE */
+    .dayuse{background:var(--bg2);padding:4rem 2.5rem}
+    .dayuse-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+    .dayuse-list{list-style:none;margin:1.2rem 0}
+    .dayuse-list li{font-size:14px;color:var(--text2);padding:9px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+    .dayuse-list li::before{content:'';width:4px;height:4px;background:var(--accent-dark);border-radius:50%;flex-shrink:0}
+    .horario-box{border:1px solid rgba(147,221,53,.4);border-radius:6px;padding:1rem 1.2rem;margin-top:1.25rem;background:rgba(147,221,53,.04)}
+    .horario-box .ht{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-dark);margin-bottom:.35rem}
+    .horario-box p{font-size:14px;color:var(--text2)}
+    .form-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.75rem;box-shadow:0 2px 16px rgba(0,0,0,.05)}
+    .form-card h3{font-size:20px;font-weight:700;color:var(--text);margin-bottom:1.4rem}
+    .fl{display:block;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--text4);margin-bottom:5px}
+    .fi{width:100%;padding:10px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:4px;color:var(--text);font-size:13px;font-family:'Barlow',sans-serif;outline:none;transition:border-color .2s;margin-bottom:1rem}
+    .fi:focus{border-color:var(--accent)}
+    .fi::placeholder{color:var(--text4)}
+    .fg2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+    .btn-wts{width:100%;background:#25D366;color:#fff;border:none;border-radius:4px;padding:13px;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;transition:all .2s;font-family:'Barlow',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:.5rem}
+    .btn-wts:hover{background:#1fb855;transform:translateY(-1px)}
+
+    /* DEPOIMENTOS */
+    .depoimentos{background:var(--bg);padding:4rem 2.5rem}
+    .dep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.85rem;max-width:960px;margin:2rem auto 0}
+    .dep-card{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:.95rem 1rem;transition:border-color .25s,transform .25s,box-shadow .25s}
+    .dep-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.07)}
+    .dep-row{display:flex;align-items:flex-start;gap:9px}
+    .dep-av{width:32px;height:32px;border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--accent-dark);flex-shrink:0;background:rgba(147,221,53,.1)}
+    .dep-name{font-size:12px;font-weight:700;color:var(--text)}
+    .dep-time{font-size:11px;color:var(--text4);margin-left:6px}
+    .dep-text{font-size:13px;color:var(--text2);line-height:1.55;margin-top:.4rem}
+    .dep-actions{display:flex;align-items:center;gap:.85rem;margin-top:.6rem}
+    .dep-like{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--text4);cursor:pointer;transition:color .2s}
+    .dep-like svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:1.5}
+    .dep-like:hover{color:#e85d7a}
+    .dep-autor{font-size:11px;color:var(--accent-dark);cursor:pointer;font-weight:700}
+    .dep-reply{font-size:11px;color:var(--text4);cursor:pointer;transition:color .2s}
+    .dep-reply:hover{color:var(--accent-dark)}
+
+    /* RESERVA */
+    .reserva{background:var(--dark);padding:4rem 2.5rem}
+    .reserva-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
+    .reserva-info p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.78;margin-bottom:1.75rem}
+    .check-list{list-style:none}
+    .check-list li{font-size:13px;color:rgba(255,255,255,.65);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:10px}
+    .chk{width:16px;height:16px;border:1px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .chk svg{width:8px;height:8px;stroke:var(--accent);fill:none;stroke-width:2.5}
+    .form-card-dark{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:1.75rem}
+    .form-card-dark h3{font-size:20px;font-weight:700;color:#fff;margin-bottom:1.4rem}
+    .fl-dark{display:block;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:5px}
+    .fi-dark{width:100%;padding:10px 14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:4px;color:#fff;font-size:13px;font-family:'Barlow',sans-serif;outline:none;transition:border-color .2s;margin-bottom:1rem}
+    .fi-dark:focus{border-color:var(--accent)}
+    .fi-dark::placeholder{color:rgba(255,255,255,.2)}
+    .btn-reservar{width:100%;background:var(--accent);color:var(--dark);border:none;border-radius:4px;padding:14px;font-size:13px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:background .2s,transform .2s;font-family:'Barlow',sans-serif;margin-top:.5rem}
+    .btn-reservar:hover{background:var(--accent-hover);transform:translateY(-2px)}
+
+    /* LOCAL */
+    .local{background:var(--bg2);padding:4rem 2.5rem}
+    .local-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:stretch}
+    .local-left{display:flex;flex-direction:column}
+    .dist-items{margin-top:1.25rem;flex:1}
+    .dist-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--border)}
+    .dist-item .city{font-size:13px;color:var(--text2)}
+    .dist-item .km{font-size:13px;font-weight:700;color:var(--accent-dark)}
+    .btn-maps{background:var(--accent);color:var(--dark);border:none;border-radius:4px;padding:11px 22px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;font-family:'Barlow',sans-serif;transition:background .2s,transform .2s;margin-top:1.5rem;display:inline-flex;align-items:center;gap:7px}
+    .btn-maps:hover{background:var(--accent-hover);transform:translateY(-1px)}
+    .btn-maps svg{width:13px;height:13px;stroke:var(--dark);fill:none;stroke-width:2}
+    .map-box{background:var(--bg);border:1px solid var(--border);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.85rem;position:relative;overflow:hidden;min-height:240px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+    .map-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(147,221,53,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(147,221,53,.06) 1px,transparent 1px);background-size:36px 36px}
+    .map-pin{width:20px;height:20px;background:var(--accent-dark);border-radius:50% 50% 50% 0;transform:rotate(-45deg);animation:pulsemap 2.5s infinite;z-index:1}
+    .map-cnt{z-index:1;display:flex;flex-direction:column;align-items:center;gap:.4rem;text-align:center}
+    .map-cnt .mn{font-size:13px;font-weight:700;color:var(--text)}
+    .map-cnt .mc{font-size:11px;color:var(--text3);letter-spacing:.1em}
+    .btn-map-sm{background:var(--accent);color:var(--dark);border:none;border-radius:4px;padding:8px 16px;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;font-family:'Barlow',sans-serif;transition:background .2s;margin-top:.35rem}
+    .btn-map-sm:hover{background:var(--accent-hover)}
+
+    /* INSTAGRAM */
+    .instagram{background:var(--bg);padding:4rem 2.5rem;border-top:1px solid var(--border)}
+    .ig-inner{max-width:960px;margin:0 auto}
+    .ig-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
+    .ig-header-left{display:flex;align-items:center;gap:14px}
+    .ig-logo-wrap{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .ig-logo-wrap svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.5}
+    .ig-handle{font-size:15px;font-weight:700;color:var(--text)}
+    .ig-handle span{font-size:12px;font-weight:400;color:var(--text3);display:block;margin-top:1px}
+    .ig-follow{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;background:linear-gradient(135deg,#f09433,#dc2743,#bc1888);color:#fff;border:none;border-radius:6px;font-size:12px;font-weight:700;letter-spacing:.1em;cursor:pointer;font-family:'Barlow',sans-serif;transition:opacity .2s;text-decoration:none}
+    .ig-follow:hover{opacity:.88}
+    .ig-follow svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:1.5}
+    .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .ig-post{border:1px solid var(--border);border-radius:10px;overflow:hidden;cursor:pointer;transition:transform .25s,border-color .25s;position:relative}
+    .ig-post:hover{transform:translateY(-4px);border-color:rgba(220,39,67,.3)}
+    .ig-post-img{aspect-ratio:1/1;background:var(--bg2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .ig-post-img svg{width:32px;height:32px;stroke:rgba(23,28,24,.2);fill:none;stroke-width:1;position:relative;z-index:1}
+    .ig-post-overlay{position:absolute;inset:0;background:rgba(23,28,24,0);display:flex;align-items:center;justify-content:center;gap:1.5rem;transition:background .25s;opacity:0}
+    .ig-post:hover .ig-post-overlay{background:rgba(23,28,24,.55);opacity:1}
+    .ig-overlay-stat{display:flex;align-items:center;gap:5px;color:#fff;font-size:13px;font-weight:700;font-family:'Barlow',sans-serif}
+    .ig-overlay-stat svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2}
+    .ig-post-body{padding:.85rem 1rem}
+    .ig-post-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem}
+    .ig-post-date{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text4)}
+    .ig-post-likes{display:flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:var(--text3)}
+    .ig-post-likes svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:1.8}
+    .ig-post-caption{font-size:13px;color:var(--text2);line-height:1.5}
+    .ig-post-caption strong{color:var(--text);font-weight:700}
+    .ig-post-tags{margin-top:.4rem;font-size:11px;color:rgba(100,100,200,.7);font-weight:600}
+    .ig-bg-1{background:linear-gradient(135deg,#e8f5e0 0%,#c8e6a0 100%)}
+    .ig-bg-2{background:linear-gradient(135deg,#e0f0f5 0%,#b0d8e8 100%)}
+    .ig-bg-3{background:linear-gradient(135deg,#f5f0e0 0%,#e8d8a0 100%)}
+
+    /* NEWSLETTER */
+    .newsletter{background:var(--bg2);padding:2.5rem 2.5rem;border-top:1px solid var(--border)}
+    .nl-inner{max-width:960px;margin:0 auto;border:2px solid rgba(147,221,53,.35);border-radius:10px;padding:1.5rem 2rem;display:flex;align-items:center;gap:1.75rem;flex-wrap:wrap;background:rgba(147,221,53,.03)}
+    .nl-icon{width:44px;height:44px;background:rgba(147,221,53,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .nl-icon svg{width:20px;height:20px;stroke:var(--accent-dark);fill:none;stroke-width:1.5}
+    .nl-heading{font-size:16px;font-weight:800;color:var(--text);text-transform:uppercase;line-height:1.2;white-space:nowrap;flex-shrink:0}
+    .nl-right{flex:1;min-width:280px;display:flex;flex-direction:column;gap:.6rem}
+    .nl-row{display:flex;gap:.75rem;align-items:stretch}
+    .nl-input{flex:1;padding:11px 16px;background:var(--bg);border:1px solid var(--border);border-radius:4px;color:var(--text);font-size:13px;font-family:'Barlow',sans-serif;outline:none;transition:border-color .2s;min-width:0}
+    .nl-input:focus{border-color:var(--accent)}
+    .nl-input::placeholder{color:var(--text4)}
+    .nl-send{background:var(--accent);color:var(--dark);border:none;border-radius:4px;padding:11px 24px;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;font-family:'Barlow',sans-serif;transition:background .2s;white-space:nowrap;display:flex;align-items:center;gap:7px;flex-shrink:0}
+    .nl-send:hover{background:var(--accent-hover)}
+    .nl-send svg{width:13px;height:13px;stroke:var(--dark);fill:none;stroke-width:2.5}
+    .nl-sub-row{display:flex;align-items:flex-start;gap:7px}
+    .nl-sub-row input[type=checkbox]{accent-color:var(--accent-dark);margin-top:2px;flex-shrink:0}
+    .nl-sub-row label{font-size:11px;color:var(--text3);cursor:pointer}
+    .nl-privacy{font-size:10px;color:var(--text4);line-height:1.45}
+
+    /* FOOTER */
+    footer{background:var(--dark);padding:2.5rem 2.5rem 0;text-align:center}
+    .footer-logo{font-size:20px;font-weight:700;color:#fff;margin-bottom:.2rem}
+    .footer-sub{font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem}
+    .footer-links{display:flex;gap:2rem;justify-content:center;margin-bottom:1.5rem;flex-wrap:wrap}
+    .footer-links a{font-size:11px;font-weight:600;color:rgba(255,255,255,.35);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:color .2s}
+    .footer-links a:hover{color:var(--accent)}
+    .footer-copy{font-size:11px;color:rgba(255,255,255,.2);padding-bottom:1.25rem}
+
+    /* ASSINATURA */
+    .assinatura{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:.75rem 2.5rem;display:flex;align-items:center;justify-content:center;gap:6px}
+    .assinatura span{font-size:10px;color:rgba(255,255,255,.2);font-family:'Barlow',sans-serif;letter-spacing:.05em}
+    .assinatura strong{font-size:10px;color:rgba(147,221,53,.55);font-weight:700;letter-spacing:.06em}
+
+    /* SOCIAL PROOF */
+    .sp-popup{position:fixed;bottom:20px;left:18px;background:var(--bg);border:1px solid rgba(147,221,53,.4);border-radius:10px;padding:.75rem .9rem;display:flex;align-items:center;gap:9px;min-width:220px;max-width:285px;z-index:9999;pointer-events:none;animation:floatUp 5.5s ease forwards;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+    .sp-av{width:28px;height:28px;border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--accent-dark);flex-shrink:0;background:rgba(147,221,53,.1)}
+    .sp-body .sp-name{font-size:12px;font-weight:700;color:var(--text)}
+    .sp-body .sp-action{font-size:11px;color:var(--text2);line-height:1.35}
+    .sp-body .sp-meta{display:flex;gap:5px;margin-top:2px;align-items:center}
+    .sp-body .sp-tag{font-size:10px;color:var(--accent-dark);font-weight:700}
+    .sp-body .sp-time{font-size:10px;color:var(--text4)}
+    .sp-live{width:6px;height:6px;background:#25D366;border-radius:50%;flex-shrink:0}
+
+    @media(max-width:700px){
+      .sobre-inner,.dayuse-inner,.reserva-inner,.local-inner{grid-template-columns:1fr}
+      .dep-grid,.ig-grid{grid-template-columns:1fr}
+      .estrutura-grid{grid-template-columns:1fr 1fr}
+      .hero h1{font-size:36px}
+      .logo-text{display:none}
+      .nav-pill span{display:none}
+      .nav-pill{padding:8px 10px}
+      .nl-row{flex-wrap:wrap}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <div class="nav-inner">
+    <a class="logo-pill" href="#hero">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6 2 3 7 3 12c0 4 2.5 7.5 6 9.5"/><path d="M12 2c6 0 9 5 9 10 0 4-2.5 7.5-6 9.5"/><path d="M12 2v20"/></svg></div>
+      <span class="logo-text">Logotipo</span>
+    </a>
+    <div class="nav-links-wrap">
+      <a class="nav-pill" href="#sobre"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg><span>Sobre o hotel</span></a>
+      <a class="nav-pill" href="#tour"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><span>Tour virtual</span></a>
+      <a class="nav-pill" href="#estrutura"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg><span>Estrutura</span></a>
+      <a class="nav-pill" href="#galeria"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg><span>Galeria</span></a>
+      <a class="nav-pill" href="#dayuse"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg><span>Day use</span></a>
+      <a class="nav-pill" href="#local"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Localização</span></a>
+    </div>
+    <a class="nav-pill nav-pill-cta" href="#reserva"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>Reservar</span></a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="hero-lines"></div><div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Serra da Mantiqueira · Barbacena MG</div>
+    <h1>Park Hotel<br><em>Mantiqueira</em></h1>
+    <p class="hero-tagline">Natureza &nbsp;·&nbsp; Conforto &nbsp;·&nbsp; Experiência</p>
+    <div class="hero-btns">
+      <a class="btn-main" href="#reserva">Faça sua reserva</a>
+      <a class="btn-sec" href="#dayuse">Agendar day use</a>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- SOBRE -->
+<section id="sobre" class="sobre leaf-bg leaf-bg-1">
+  <div class="sobre-inner">
+    <div class="sobre-left">
+      <div class="sobre-text">
+        <p class="section-eyebrow">Sobre o hotel</p>
+        <h2 class="section-title">Um refúgio na<br><strong>Serra da Mantiqueira</strong></h2>
+        <div class="section-line"></div>
+        <p>Em meio à exuberante natureza de Minas Gerais, o Park Hotel Mantiqueira oferece uma experiência única de hospitalidade e bem-estar. Cada detalhe foi pensado para proporcionar momentos inesquecíveis.</p>
+        <p>Estrutura completa para hóspedes, eventos e day use — com o charme e a sofisticação que só a Mantiqueira pode oferecer.</p>
+      </div>
+      <div class="sobre-stats">
+        <div class="stat"><div class="n">15+</div><div class="l">Anos de história</div></div>
+        <div class="stat"><div class="n">4.9</div><div class="l">Avaliação média</div></div>
+        <div class="stat"><div class="n">500+</div><div class="l">Hóspedes / mês</div></div>
+        <div class="stat"><div class="n">20ha</div><div class="l">Área verde</div></div>
+      </div>
+    </div>
+    <div class="video-col">
+      <div class="video-frame">
+        <div class="play-ring"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6BB520" stroke-width="1.5"><polygon points="5,3 19,12 5,21"/></svg></div>
+        <span class="vid-label">Vídeo do hotel</span>
+        <span class="vid-ratio">1080 × 1920 · vertical</span>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- TOUR VIRTUAL -->
+<section id="tour" class="tour">
+  <div class="tour-inner">
+    <div>
+      <p class="section-eyebrow" style="color:var(--accent)">Drone · 4K</p>
+      <h2 class="section-title" style="color:#fff">Tour <strong style="color:var(--accent)">virtual</strong> pelo hotel</h2>
+      <div class="section-line"></div>
+      <p style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.78;max-width:500px">Explore o hotel do alto com um voo de drone capturando cada detalhe do espaço e da natureza ao redor.</p>
+    </div>
+    <div class="tour-frame">
+      <div class="tour-grid"></div>
+      <div class="tour-badge">Vídeo 4K · Drone</div>
+      <div class="drone-anim">
+        <svg viewBox="0 0 64 64"><rect x="24" y="28" width="16" height="8" rx="2"/><line x1="24" y1="32" x2="8" y2="32"/><line x1="40" y1="32" x2="56" y2="32"/><circle cx="8" cy="32" r="5"/><circle cx="56" cy="32" r="5"/><line x1="24" y1="28" x2="14" y2="18"/><line x1="40" y1="28" x2="50" y2="18"/><circle cx="14" cy="18" r="4"/><circle cx="50" cy="18" r="4"/><line x1="32" y1="36" x2="32" y2="46"/><circle cx="32" cy="50" r="3"/><ellipse cx="8" cy="32" rx="9" ry="3" opacity=".3"/><ellipse cx="56" cy="32" rx="9" ry="3" opacity=".3"/><ellipse cx="14" cy="18" rx="8" ry="2.5" opacity=".3"/><ellipse cx="50" cy="18" rx="8" ry="2.5" opacity=".3"/></svg>
+      </div>
+      <div class="tour-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#93DD35" stroke-width="1.5"><polygon points="5,3 19,12 5,21"/></svg></div>
+      <span class="tour-label">Tour virtual com drone</span>
+      <span class="tour-sub">Vídeo horizontal 16:9 · Inserir posteriormente</span>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ESTRUTURA -->
+<section id="estrutura" class="estrutura leaf-bg leaf-bg-2">
+  <div style="max-width:960px;margin:0 auto">
+    <p class="section-eyebrow">Infraestrutura</p>
+    <h2 class="section-title">Nossa <strong>estrutura</strong></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="estrutura-grid">
+    <div class="est-card br bb"><svg class="est-icon-svg" viewBox="0 0 32 32"><path d="M4 22 Q10 10 16 14 Q22 10 28 22"/><rect x="4" y="22" width="24" height="5" rx="1.5"/><path d="M4 27v3M28 27v3"/></svg><h3>Piscina externa</h3><div class="est-sub">Ao ar livre</div><div class="mini-popup"><p>Piscina externa com vista para a natureza.</p><ul><li>Área de descanso ao ar livre</li><li>Espreguiçadeiras e sombra</li><li>Tratamento contínuo</li></ul></div></div>
+    <div class="est-card br bb"><svg class="est-icon-svg" viewBox="0 0 32 32"><rect x="3" y="12" width="26" height="14" rx="2"/><path d="M3 19 Q16 14 29 19"/><path d="M9 26L9 29M23 26L23 29"/><rect x="10" y="8" width="5" height="4" rx="1"/><rect x="17" y="8" width="5" height="4" rx="1"/></svg><h3>Piscina interna aquecida</h3><div class="est-sub">Com bar molhado</div><div class="mini-popup"><p>Piscina aquecida coberta com conforto total.</p><ul><li>Temperatura controlada</li><li>Bar molhado integrado</li><li>Ambiente climatizado</li></ul></div></div>
+    <div class="est-card bb"><svg class="est-icon-svg" viewBox="0 0 32 32"><rect x="6" y="8" width="20" height="14" rx="3"/><path d="M11 8V6M21 8V6"/><path d="M6 18 Q16 13 26 18"/></svg><h3>Sauna seca finlandesa</h3><div class="est-sub">Tradicional</div><div class="mini-popup"><p>Sauna seca tradicional finlandesa.</p><ul><li>Temperatura alta controlada</li><li>Madeira nobre</li><li>Duchas de contraste</li></ul></div></div>
+    <div class="est-card br"><svg class="est-icon-svg" viewBox="0 0 32 32"><path d="M7 26V13Q7 9 11 9L21 9Q25 9 25 13V26"/><path d="M4 26L28 26"/><path d="M13 18L19 18M13 22L19 22"/></svg><h3>Restaurante regional</h3><div class="est-sub">Culinária mineira</div><div class="mini-popup"><p>Sabores autênticos de Minas em ambiente refinado.</p><ul><li>Café da manhã incluso</li><li>À la carte mineiro</li><li>Café colonial aos fins de semana</li></ul></div></div>
+    <div class="est-card br"><svg class="est-icon-svg" viewBox="0 0 32 32"><path d="M4 28L4 15L16 6L28 15L28 28Z"/><rect x="12" y="19" width="8" height="9" rx="1"/><path d="M11 15L16 11L21 15"/></svg><h3>Espaço para eventos</h3><div class="est-sub">Celebrações</div><div class="mini-popup"><p>Ambientes versáteis para ocasiões memoráveis.</p><ul><li>Salão para 200 pessoas</li><li>Área para casamentos</li><li>Suporte audiovisual</li></ul></div></div>
+    <div class="est-card"><svg class="est-icon-svg" viewBox="0 0 32 32"><path d="M16 3Q9 11 9 18A7 7 0 0 0 23 18Q23 11 16 3Z"/><path d="M16 25L16 29"/><path d="M11 24Q13.5 28 16 29Q18.5 28 21 24"/></svg><h3>Natureza e trilhas</h3><div class="est-sub">Mata Atlântica</div><div class="mini-popup"><p>20 hectares de Mata Atlântica preservada.</p><ul><li>Trilhas ecológicas guiadas</li><li>Jardins paisagísticos</li><li>Observação de fauna</li></ul></div></div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- GALERIA -->
+<section id="galeria" class="galeria leaf-bg leaf-bg-1">
+  <div style="max-width:960px;margin:0 auto">
+    <p class="section-eyebrow">Galeria</p>
+    <h2 class="section-title">Conheça nossos <strong>espaços</strong></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="carousel-outer" style="max-width:960px;margin:2rem auto 0">
+    <button class="car-btn car-prev" id="carPrev" type="button"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15,18 9,12 15,6"/></svg></button>
+    <div class="carousel-wrap">
+      <div class="carousel-track" id="carTrack">
+        <div class="gal-item"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span class="gal-label">Fachada</span></div>
+        <div class="gal-item"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg><span class="gal-label">Piscina externa</span></div>
+        <div class="gal-item"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/></svg><span class="gal-label">Piscina interna</span></div>
+        <div class="gal-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span class="gal-label">Restaurante</span></div>
+        <div class="gal-item"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span class="gal-label">Eventos</span></div>
+        <div class="gal-item"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span class="gal-label">Natureza</span></div>
+      </div>
+    </div>
+    <button class="car-btn car-next" id="carNext" type="button"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg></button>
+    <div class="car-dots" id="carDots"><div class="car-dot active"></div><div class="car-dot"></div><div class="car-dot"></div><div class="car-dot"></div></div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- DAY USE -->
+<section id="dayuse" class="dayuse">
+  <div class="dayuse-inner">
+    <div>
+      <p class="section-eyebrow">Experiência diurna</p>
+      <h2 class="section-title">Day <strong>use</strong></h2>
+      <div class="section-line"></div>
+      <p style="font-size:14px;color:var(--text2);line-height:1.78">Aproveite um dia completo na estrutura do hotel sem necessidade de hospedagem.</p>
+      <ul class="dayuse-list">
+        <li>Acesso às piscinas externa e interna aquecida</li>
+        <li>Sauna seca finlandesa</li>
+        <li>Bar molhado na piscina interna</li>
+        <li>Área de lazer completa</li>
+        <li>Estacionamento incluído</li>
+        <li>Opções de alimentação no restaurante</li>
+      </ul>
+      <div class="horario-box">
+        <div class="ht">Horário</div>
+        <p>Das <strong style="color:var(--accent-dark)">9h</strong> às <strong style="color:var(--accent-dark)">18h</strong> — Reserva antecipada recomendada</p>
+      </div>
+    </div>
+    <div class="form-card">
+      <h3>Solicitar day use</h3>
+      <label class="fl">Nome completo</label><input class="fi" type="text" placeholder="Seu nome"/>
+      <div class="fg2"><div><label class="fl">Data</label><input class="fi" type="date"/></div><div><label class="fl">Pessoas</label><input class="fi" type="number" placeholder="2"/></div></div>
+      <label class="fl">Telefone / WhatsApp</label><input class="fi" type="tel" placeholder="(32) 9 0000-0000" style="margin-bottom:1.2rem"/>
+      <button class="btn-wts">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.563 4.14 1.543 5.877L.057 23.997l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.64-.51-5.148-1.399l-.368-.214-3.742.98.999-3.648-.24-.376A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Enviar via WhatsApp
+      </button>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="depoimentos leaf-bg leaf-bg-2">
+  <div style="max-width:960px;margin:0 auto">
+    <p class="section-eyebrow">Avaliações</p>
+    <h2 class="section-title">O que nossos <strong>hóspedes</strong> dizem</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="dep-grid">
+    <div class="dep-card"><div class="dep-row"><div class="dep-av">MR</div><div style="flex:1"><span class="dep-name">maria_rezende</span><span class="dep-time">4d</span><p class="dep-text">O melhor hotel da região! Estrutura incrível e atendimento impecável. Voltamos todo ano 😍</p><div class="dep-actions"><div class="dep-like"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>247</div><span class="dep-autor">pelo autor</span><span class="dep-reply">Responder</span></div></div></div></div>
+    <div class="dep-card"><div class="dep-row"><div class="dep-av">JP</div><div style="flex:1"><span class="dep-name">joao.plima</span><span class="dep-time">59 sem</span><p class="dep-text">Bommmm demaissss esse lugar, experiência incrível q passei por 2x 🔥</p><div class="dep-actions"><div class="dep-like"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>184</div><span class="dep-autor">pelo autor</span><span class="dep-reply">Responder</span></div></div></div></div>
+    <div class="dep-card"><div class="dep-row"><div class="dep-av">CS</div><div style="flex:1"><span class="dep-name">carla.sousa_mg</span><span class="dep-time">2sem</span><p class="dep-text">Tudo maravilhoso 🤩 A piscina interna aquecida é incrível! Recomendo muito.</p><div class="dep-actions"><div class="dep-like"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>312</div><span class="dep-autor">pelo autor</span><span class="dep-reply">Responder</span></div></div></div></div>
+    <div class="dep-card"><div class="dep-row"><div class="dep-av">TP</div><div style="flex:1"><span class="dep-name">tiago.ppinheiro</span><span class="dep-time">59 sem</span><p class="dep-text">Fiz meu aniversário aqui e foi perfeito. Equipe dedicada, espaço lindo 👏</p><div class="dep-actions"><div class="dep-like"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>98</div><span class="dep-autor">pelo autor</span><span class="dep-reply">Responder</span></div></div></div></div>
+    <div class="dep-card"><div class="dep-row"><div class="dep-av">FJ</div><div style="flex:1"><span class="dep-name">fabianaejonas20.08</span><span class="dep-time">59 sem</span><p class="dep-text">Tudo maravilhoso 🤩 Recomendo demais pra família inteira! Estrutura impecável.</p><div class="dep-actions"><div class="dep-like"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>156</div><span class="dep-autor">pelo autor</span><span class="dep-reply">Responder</span></div></div></div></div>
+    <div class="dep-card"><div class="dep-row"><div class="dep-av">VL</div><div style="flex:1"><span class="dep-name">vitor.lima_bh</span><span class="dep-time">3sem</span><p class="dep-text">Day use foi sensacional. O bar molhado na piscina interna é demais! 🙌</p><div class="dep-actions"><div class="dep-like"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>201</div><span class="dep-autor">pelo autor</span><span class="dep-reply">Responder</span></div></div></div></div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- RESERVA -->
+<section id="reserva" class="reserva">
+  <div class="reserva-inner">
+    <div class="reserva-info">
+      <p class="section-eyebrow" style="color:var(--accent)">Hospedagem</p>
+      <h2 class="section-title" style="color:#fff"><span style="font-weight:300">Faça sua</span> <strong style="color:var(--accent)">reserva</strong></h2>
+      <div class="section-line"></div>
+      <p>Reserve diretamente conosco e garanta as melhores condições. Atendimento personalizado do check-in ao check-out.</p>
+      <ul class="check-list">
+        <li><div class="chk"><svg viewBox="0 0 8 8"><polyline points="1,4 3,6 7,2"/></svg></div>Check-in a partir das 14h</li>
+        <li><div class="chk"><svg viewBox="0 0 8 8"><polyline points="1,4 3,6 7,2"/></svg></div>Check-out até as 12h</li>
+        <li><div class="chk"><svg viewBox="0 0 8 8"><polyline points="1,4 3,6 7,2"/></svg></div>Café da manhã incluso</li>
+        <li><div class="chk"><svg viewBox="0 0 8 8"><polyline points="1,4 3,6 7,2"/></svg></div>Acesso completo à área de lazer</li>
+        <li><div class="chk"><svg viewBox="0 0 8 8"><polyline points="1,4 3,6 7,2"/></svg></div>Cancelamento gratuito até 48h antes</li>
+      </ul>
+    </div>
+    <div class="form-card-dark">
+      <h3>Solicitar reserva</h3>
+      <label class="fl-dark">Nome completo</label><input class="fi-dark" type="text" placeholder="Seu nome"/>
+      <label class="fl-dark">Telefone</label><input class="fi-dark" type="tel" placeholder="(32) 9 0000-0000"/>
+      <div class="fg2"><div><label class="fl-dark">Check-in</label><input class="fi-dark" type="date"/></div><div><label class="fl-dark">Check-out</label><input class="fi-dark" type="date"/></div></div>
+      <div class="fg2"><div><label class="fl-dark">Pessoas</label><input class="fi-dark" type="number" placeholder="2"/></div><div><label class="fl-dark">Quartos</label><input class="fi-dark" type="number" placeholder="1"/></div></div>
+      <label class="fl-dark">E-mail</label><input class="fi-dark" type="email" placeholder="seu@email.com" style="margin-bottom:1.2rem"/>
+      <button class="btn-reservar">Reservar</button>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- LOCAL -->
+<section id="local" class="local leaf-bg leaf-bg-1">
+  <div class="local-inner">
+    <div class="local-left">
+      <p class="section-eyebrow">Como chegar</p>
+      <h2 class="section-title">Localização</h2>
+      <div class="section-line"></div>
+      <p style="font-size:14px;color:var(--text2);line-height:1.78">Acessível a partir das principais cidades de Minas Gerais e São Paulo, na Serra da Mantiqueira.</p>
+      <div class="dist-items">
+        <div class="dist-item"><span class="city">Barbacena — Hotel</span><span class="km">7 km</span></div>
+        <div class="dist-item"><span class="city">Belo Horizonte</span><span class="km">180 km</span></div>
+        <div class="dist-item"><span class="city">São Paulo</span><span class="km">380 km</span></div>
+        <div class="dist-item"><span class="city">Rio de Janeiro</span><span class="km">330 km</span></div>
+      </div>
+      <button class="btn-maps" onclick="window.open('https://maps.google.com','_blank')">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Ver no Google Maps
+      </button>
+    </div>
+    <div class="map-box">
+      <div class="map-grid-bg"></div>
+      <div class="map-cnt">
+        <div class="map-pin"></div>
+        <div class="mn">Park Hotel Mantiqueira</div>
+        <div class="mc">Barbacena, MG</div>
+        <button class="btn-map-sm" onclick="window.open('https://maps.google.com','_blank')">Abrir mapa</button>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- INSTAGRAM -->
+<section id="instagram" class="instagram leaf-bg leaf-bg-2">
+  <div class="ig-inner">
+    <div class="ig-header">
+      <div class="ig-header-left">
+        <div class="ig-logo-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        <div><div class="ig-handle">@parkhomantiqueira<span>Últimas do Instagram</span></div></div>
+      </div>
+      <a class="ig-follow" href="#" onclick="return false"><svg viewBox="0 0 24 24"><path d="M22 16.74V4a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v12.74"/><path d="M6 16.74V10a2 2 0 0 0-2-2H2"/><path d="M10 22h4"/><path d="M12 17v5"/></svg>Seguir no Instagram</a>
+    </div>
+    <div class="ig-grid">
+      <div class="ig-post"><div class="ig-post-img ig-bg-1"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg><div class="ig-post-overlay"><div class="ig-overlay-stat"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>847</div><div class="ig-overlay-stat"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>43</div></div></div><div class="ig-post-body"><div class="ig-post-meta"><span class="ig-post-date">12 abr 2025</span><div class="ig-post-likes"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>847</div></div><p class="ig-post-caption"><strong>Fim de semana perfeito</strong> começa aqui 🌿 Nossa piscina interna aquecida te espera para uma tarde de relaxamento total.</p><div class="ig-post-tags">#ParkHotelMantiqueira #DayUse #Relaxamento</div></div></div>
+      <div class="ig-post"><div class="ig-post-img ig-bg-2"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><div class="ig-post-overlay"><div class="ig-overlay-stat"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>1.2k</div><div class="ig-overlay-stat"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>67</div></div></div><div class="ig-post-body"><div class="ig-post-meta"><span class="ig-post-date">5 abr 2025</span><div class="ig-post-likes"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>1,2k</div></div><p class="ig-post-caption"><strong>Amanhecer na Mantiqueira</strong> ☀️ Acorde com essa vista todos os dias. Café da manhã incluso para todos os hóspedes!</p><div class="ig-post-tags">#Mantiqueira #MinasGerais #HotelDeLuxo</div></div></div>
+      <div class="ig-post"><div class="ig-post-img ig-bg-3"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><div class="ig-post-overlay"><div class="ig-overlay-stat"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>634</div><div class="ig-overlay-stat"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>28</div></div></div><div class="ig-post-body"><div class="ig-post-meta"><span class="ig-post-date">28 mar 2025</span><div class="ig-post-likes"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>634</div></div><p class="ig-post-caption"><strong>Família reunida</strong> é tudo 💚 Nosso espaço foi feito para criar memórias que durem para sempre. Venha nos visitar!</p><div class="ig-post-tags">#Família #Momentos #SerraDoMantiqueira</div></div></div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- NEWSLETTER -->
+<section id="newsletter" class="newsletter">
+  <div class="nl-inner">
+    <div class="nl-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+    <div class="nl-heading">Receba ofertas<br>e novidades</div>
+    <div class="nl-right">
+      <div class="nl-row">
+        <input class="nl-input" type="text" placeholder="Nome"/>
+        <input class="nl-input" type="email" placeholder="E-mail"/>
+        <button class="nl-send">Enviar <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></button>
+      </div>
+      <div class="nl-sub-row"><input type="checkbox" id="nlc"/><label for="nlc">Aceito receber comunicações e ofertas do hotel.</label></div>
+      <p class="nl-privacy">Ao enviar, estará ciente de que seus dados serão tratados pelo hotel com a finalidade exclusiva de envio de ações de marketing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Park Hotel Mantiqueira</div>
+  <div class="footer-sub">Barbacena · Minas Gerais</div>
+  <div class="footer-links">
+    <a href="#sobre">Sobre o hotel</a>
+    <a href="#tour">Tour virtual</a>
+    <a href="#estrutura">Estrutura</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#dayuse">Day use</a>
+    <a href="#reserva">Reservas</a>
+    <a href="#local">Localização</a>
+  </div>
+  <p class="footer-copy">© 2025 Park Hotel Mantiqueira. Todos os direitos reservados.</p>
+</footer>
+
+<!-- ASSINATURA -->
+<div class="assinatura">
+  <span>Criado por:</span>
+  <strong>Evren Slon Company</strong>
+</div>
+
+<script>
+(function(){
+  var track=document.getElementById('carTrack');
+  var prev=document.getElementById('carPrev');
+  var next=document.getElementById('carNext');
+  var dotsEl=document.getElementById('carDots');
+  var dots=dotsEl.children;
+  var items=track.children;
+  var step=0;
+  function getMax(){return Math.max(0,items.length-3);}
+  function upd(){
+    var w=items[0].offsetWidth+14;
+    track.style.transform='translateX(-'+(step*w)+'px)';
+    for(var i=0;i<dots.length;i++) dots[i].classList.toggle('active',i===Math.min(step,dots.length-1));
+  }
+  prev.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();if(step>0){step--;upd();}});
+  next.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();if(step<getMax()){step++;upd();}});
+  Array.prototype.forEach.call(dots,function(d,i){d.addEventListener('click',function(){step=Math.min(i,getMax());upd();});});
+  window.addEventListener('resize',function(){step=Math.min(step,getMax());upd();});
+
+  var users=[
+    {i:'AL',n:'ana_luizamg',a:'visualizou o Quarto Deluxe',t:'#hospedagem'},
+    {i:'RM',n:'rafaelm.bh',a:'agendou Day Use para sábado',t:'#dayuse'},
+    {i:'BF',n:'beatriz.farias',a:'solicitou reserva — 3 noites',t:'#reserva'},
+    {i:'TN',n:'thiago.nasc',a:'visualizou o Espaço de Eventos',t:'#eventos'},
+    {i:'CM',n:'camila.mm',a:'avaliou com 5 estrelas ★',t:'#review'},
+    {i:'MV',n:'marcos.viana',a:'agendou Day Use para amanhã',t:'#dayuse'},
+    {i:'LR',n:'larissa.r_mg',a:'visualizou a Galeria de fotos',t:'#galeria'},
+    {i:'PB',n:'pedro.barros',a:'reservou o Salão de Eventos',t:'#eventos'},
+    {i:'FO',n:'fernanda.oli',a:'solicitou reserva — fim de semana',t:'#reserva'},
+    {i:'GC',n:'guilherme.c',a:'visualizou a Piscina Interna',t:'#estrutura'},
+    {i:'IS',n:'isa.souza_mg',a:'agendou Day Use com família',t:'#dayuse'},
+    {i:'VL',n:'vitor.lima',a:'solicitou orçamento de evento',t:'#eventos'},
+    {i:'NP',n:'natalia.p',a:'visualizou o pacote Lua de Mel',t:'#hospedagem'},
+    {i:'DR',n:'diego.rocha',a:'agendou visita ao hotel',t:'#visita'},
+    {i:'JS',n:'julia.santos',a:'avaliou a sauna com 5 estrelas',t:'#sauna'}
+  ];
+  var tl=['agora mesmo','1 min atrás','2 min atrás','agora mesmo','3 min atrás','1 min atrás','4 min atrás'];
+  var idx=0;
+  function show(){
+    var u=users[idx%users.length];idx++;
+    var el=document.createElement('div');el.className='sp-popup';
+    el.innerHTML='<div class="sp-av">'+u.i+'</div><div class="sp-body"><div class="sp-name">'+u.n+'</div><div class="sp-action">'+u.a+'</div><div class="sp-meta"><span class="sp-tag">'+u.t+'</span><span style="font-size:10px;color:var(--text4)"> · </span><span class="sp-time">'+tl[Math.floor(Math.random()*tl.length)]+'</span></div></div><div class="sp-live"></div>';
+    document.body.appendChild(el);
+    setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el);},5800);
+  }
+  [8000,43000,115000,63000,173000,88000,131000,198000,223000,153000,268000,88000,183000,243000,313000].forEach(function(d){setTimeout(show,d);});
+})();
+</script>
+</body>
+</html>
